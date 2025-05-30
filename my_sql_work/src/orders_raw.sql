@@ -6,8 +6,9 @@
 USE CATALOG {{catalog}};
 USE IDENTIFIER({{schema}});
 
+
 CREATE OR REFRESH STREAMING TABLE
-  orders_raw
+  orders_raw5
 AS SELECT
   customer_name,
   DATE(TIMESTAMP(FROM_UNIXTIME(TRY_CAST(order_datetime AS BIGINT)))) AS order_date,
